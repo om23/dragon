@@ -1,8 +1,7 @@
 # dragon
 TPED Animatronic dragon
 
-Intel Edison info:
-
+Intel Edison info:  
 password: fireflies  
 unique name: omfireflies  
 To check network status: wpa_cli status
