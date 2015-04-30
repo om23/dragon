@@ -1,7 +1,26 @@
 # dragon
 TPED Animatronic dragon
 
-Intel Edison info:  
+This git repo contains some of the work being done by the Drexel TPED Club towards building an animatronic dragon.
+
+More to come...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Intel Edison info:  
 password: fireflies  
 unique name: omfireflies  
 To check network status: wpa_cli status
