@@ -21,7 +21,7 @@ More to come...
 
 
 #Intel Edison info:  
-password: fireflies  
+//password: fireflies  
 unique name: omfireflies  
 To check network status: wpa_cli status
 
