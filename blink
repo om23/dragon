@@ -1,0 +1,5 @@
+var mraa = require('mraa'); //creates ref to build-in mraa lib
+var led = new mraa.Gpio(13); //set var to pin 13--led on board
+led.dir(mraa.DIR_OUT); //pin 13 act as output pin
+led.write(1); //led on
+led.write(0); //led off
