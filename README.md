@@ -22,6 +22,7 @@ More to come...
 
 #Intel Edison info:  
 unique name: dragonTPED  
+id: root
 password: themeparksrule  
 To check network status: wpa_cli status
 
