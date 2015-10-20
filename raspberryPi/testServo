@@ -2,10 +2,10 @@
 
 COUNTER=20
 until [ $COUNTER -lt 10 ]; do
-  `echo 0=20% > /dev/servoblaster`
+  `echo 0=40% > /dev/servoblaster`
    sleep .25
-  `echo 0=-20% > /dev/servoblaster`
-   sleep .35
+  `echo 0=-40% > /dev/servoblaster`
+   sleep .5
    echo COUNTER $COUNTER
    let COUNTER-=1 
 done
