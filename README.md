@@ -9,7 +9,9 @@ More to come...
 
 #Raspberry Pi 2 (Current Dev board)
 
-Use this version of ServoBlaster: https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=99115&p=699651#p699651
+ServoBlaster (make sure you are using latest version)
+
+Servo library by adafruit: https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code
 
 
 
@@ -24,7 +26,8 @@ Use this version of ServoBlaster: https://www.raspberrypi.org/forums/viewtopic.p
 
 
 
-#Intel Edison info:  
+#Outdated
+Intel Edison info:  
 unique name: dragonTPED  
 id: root
 password: themeparksrule  
