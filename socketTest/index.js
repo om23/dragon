@@ -18,8 +18,6 @@ io.on('connection', function(socket){
 			console.log("user sent hi to me");
 			io.emit('chat message', 'Now try, "fly"');
 
-			console.log(`ls`);
-
 		} else if (msg == "fly") {
 			io.emit('chat message', 'D.O.D.:  I am trying my best!');
 			console.log("flapping my wings...");
