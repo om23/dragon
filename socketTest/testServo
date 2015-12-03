@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# library used: ServoBlaster (https://github.com/richardghirst/PiBits/tree/master/ServoBlaster)
+
+echo "hello world" > tacos.txt
+
+COUNTER=20
+until [ $COUNTER -lt 10 ]; do
+
+  #Neck Vertical
+   #Servo on GPIO-4
+  `echo 0=25% > /dev/servoblaster`
+   sleep .25
+  `echo 0=-25% > /dev/servoblaster`
+   sleep .5
+
+  #Neck Horizontal
+   #Servo on GPIO-17
+  `echo 1=16% > /dev/servoblaster`
+   sleep .25
+  `echo 1=-16% > /dev/servoblaster`
+   sleep .5
+
+  #Wing 1
+   #Servo on GPIO-18
+  `echo 2=13% > /dev/servoblaster`
+   sleep .25
+  `echo 2=-13% > /dev/servoblaster`
+   sleep .5
+
+  #Wing 2
+   #Servo on GPIO 21/27
+  `echo 3=13% > /dev/servoblaster`
+   sleep .25
+  `echo 3=-13% > /dev/servoblaster`
+   sleep .5
+
+  #Tail Horizontal
+   #Servo on GPIO-22
+  `echo 4=22% > /dev/servoblaster`
+   sleep .25
+  `echo 4=-22% > /dev/servoblaster`
+   sleep .5
+
+  #Tail Vertical
+   #Servo on GPIO-23
+  `echo 5=16% > /dev/servoblaster`
+   sleep .25
+  `echo 5=-16% > /dev/servoblaster`
+   sleep .5
+
+
+   echo COUNTER $COUNTER
+   let COUNTER-=1 
+done
+
