@@ -1,3 +1,15 @@
+(function() {
+ var childProcess = require("child_process");
+ var oldSpawn = childProcess.spawn;
+ function mySpawn() {
+  console.log('spawn called');
+  console.log(arguments);
+  var result = oldSpawn.apply(this, arguments);
+  return result;
+ }
+ childProcess.spawn = mySpawn;
+})();
+
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -23,8 +35,8 @@ io.on('connection', function(socket){
 			console.log("flapping my wings...");
 
 
-			var deploySh = spawn('sh', [ 'helloWorld' ], {
-				cwd: process.env.HOME + '/Documents/dragon/socketTest/',
+			var deploySh = spawn('sh', [ 'testServo' ], {
+				cwd: process.env.HOME + '/dragon/socketTest/',
 				env:_.extend(process.env, { PATH: process.env.PATH + ':/usr/local/bin'})
 			});
 		}

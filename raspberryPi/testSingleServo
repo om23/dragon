@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# library used: ServoBlaster (https://github.com/richardghirst/PiBits/tree/master/ServoBlaster)
+
+
+COUNTER=20
+until [ $COUNTER -lt 10 ]; do
+
+  #Neck Vertical
+   #Servo on GPIO-4
+  `echo 0=40%> /dev/servoblaster`
+   sleep .25
+  `echo 0=-40% > /dev/servoblaster`
+   sleep .25
+
+
+
+  #Servo on GPIO-17 
+   `echo 1=25% > /dev/servoblaster`
+  sleep .25
+   `echo 1=-25% > /dev/servoblaster`
+  sleep .25 
+
+   echo COUNTER $COUNTER
+   let COUNTER-=1 
+done
+
